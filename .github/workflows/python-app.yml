@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/
+          pytest -v tests/
 
       - name: Deploy Model
         run: |
