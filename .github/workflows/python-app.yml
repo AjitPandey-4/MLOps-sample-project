@@ -25,4 +25,11 @@ jobs:
         pip install flake8
         flake8 .
 
-    - name: Run te
+    - name: Run tests
+      run: |
+        pytest
+
+    - name: Deploy Model
+      run: |
+        echo "Deploying the model..."
+        # Add your deployment script/commands here
