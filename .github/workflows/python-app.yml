@@ -25,11 +25,17 @@ jobs:
           pip install flake8
           flake8 .
 
+      - name: List test files
+        run: ls -R tests/
+
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+
       - name: Run tests
         run: |
-          pytest
+          pytest -v tests/
 
       - name: Deploy Model
         run: |
           echo "Deploying the model..."
-          # Add your deployment script/commands here
+          # Add your deployment script/commands here
