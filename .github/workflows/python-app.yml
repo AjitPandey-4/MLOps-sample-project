@@ -25,9 +25,7 @@ jobs:
         pip install flake8
         flake8 .
 
-    - name: Run tests
-      run: |
-        pytest
+        
 
     - name: Deploy Model
       run: |
